@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Select Paragraphs by Class</title>
+    <style>
+      .special {
+        color: blue;
+      }
+
+      .highlight {
+        color: green;
+      }
+
+      .custom {
+        color: purple;
+      }
+    </style>
+  </head>
+  <body>
+    <div><h1>Answer 13 no Question</h1></div>
+    <h1>Select Paragraphs by Class</h1>
+    <p class="special">This is a special paragraph.</p>
+    <p class="highlight">This paragraph is highlighted.</p>
+    <p>This is a normal paragraph.</p>
+    <p class="highlight">This paragraph is also highlighted.</p>
+    <p class="custom">This paragraph has a custom class.</p>
+
+    <script>
+      function changeTextColor() {
+        const paragraphs = document.querySelectorAll(".highlight");
+
+        paragraphs.forEach((paragraph) => {
+          paragraph.style.color = "red";
+        });
+      }
+
+      // Call the function to change the text color
+      changeTextColor();
+    </script>
+  </body>
+</html>

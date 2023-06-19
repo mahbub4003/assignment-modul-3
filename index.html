@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div><h1>Answer 1 no Question</h1></div>
+    <script>
+      function getDayOfWeek(dateString) {
+        let date = new Date(dateString);
+        let options = { weekday: "long" };
+        let dayOfWeek = date.toLocaleDateString("en-US", options);
+        document.write(dayOfWeek);
+      }
+
+      const date = "2023-06-16";
+      getDayOfWeek(date);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .highlight {
+        background-color: yellow;
+      }
+    </style>
+  </head>
+  <body>
+    <div><h1>Answer 10 no Question</h1></div>
+    <div>
+      <p id="para">This is pargraph</p>
+      <button onclick="changeClass()">Clock</button>
+    </div>
+    <script>
+      function changeClass() {
+        let p = document.getElementById("para");
+        p.classList.add("highlight");
+      }
+    </script>
+  </body>
+</html>

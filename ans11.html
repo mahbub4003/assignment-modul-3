@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div><h1>Answer 11 no Question</h1></div>
+    <div>
+      <ul id="ul"></ul>
+    </div>
+    <script>
+      function createLi(num) {
+        let ul = document.getElementById("ul");
+        for (let i = 1; i <= num; i++) {
+          let li = document.createElement("li");
+          li.innerText = i;
+          ul.appendChild(li);
+        }
+      }
+      createLi(5);
+    </script>
+  </body>
+</html>

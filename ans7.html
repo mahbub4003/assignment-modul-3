@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Webpage Event Functionality</title>
+  </head>
+  <body>
+    <h1>Webpage Event Functionality</h1>
+    <p>Click anywhere on the page to display the coordinates.</p>
+    <p>Press any key on the keyboard to display the key code.</p>
+    <img
+      id="myImage"
+      src="https://scontent.fdac2-1.fna.fbcdn.net/v/t39.30808-6/353619750_3521870654750337_6244918566184422500_n.jpg?_nc_cat=104&cb=99be929b-3346023f&ccb=1-7&_nc_sid=09cbfe&_nc_eui2=AeGw4NtsZcrzTBgD5Wd4pmcax7l77K_aAebHuXvsr9oB5rQEq4iJxRyerr2nA-_quoTo86gHLjXIvz_v1K9A_8Ii&_nc_ohc=wCNjQlHmxxQAX85oUa5&_nc_zt=23&_nc_ht=scontent.fdac2-1.fna&oh=00_AfDQPonTMkC0nlLn04BBWFSD1_KgQb5h7lexks-1v9DtDA&oe=649506C0"
+      alt="Image"
+      onmouseover="handleMouseOver(event)"
+    />
+
+    <script>
+      //Ans for a Function to handle click event
+      function handleMouseClick(event) {
+        const x = event.clientX;
+        const y = event.clientY;
+        alert(`Clicked at (${x}, ${y})`);
+      }
+      document.addEventListener("click", handleMouseClick);
+
+      // Ans for b Function to handle keydown event
+      function handleKeyDown(event) {
+        const keyCode = event.keyCode || event.which;
+        alert(`Pressed key with code: ${keyCode}`);
+      }
+      document.addEventListener("keydown", handleKeyDown);
+
+      //Ans for c Function to handle mouseover event
+      function handleMouseOver(event) {
+        const image = document.getElementById("myImage");
+        image.src =
+          "https://scontent.fdac2-2.fna.fbcdn.net/v/t1.6435-9/73088341_519192005571178_4333258750509973504_n.jpg?_nc_cat=101&cb=99be929b-3346023f&ccb=1-7&_nc_sid=dbeb18&_nc_eui2=AeFiXZRb7f03Ln7ZJeP8UNmC7i-yTrusF9PuL7JOu6wX02IaU_twP2Umo8G7AD60_KY_e3J_xdjKCo2urpHQ7GP7&_nc_ohc=eh08-5YT_5QAX98oZpL&_nc_ht=scontent.fdac2-2.fna&oh=00_AfAv35psyQpUHrsm-2c66XSQ_bf6RPR1DEHf4WjtR6Raag&oe=64B6AB67";
+      }
+    </script>
+  </body>
+</html>
